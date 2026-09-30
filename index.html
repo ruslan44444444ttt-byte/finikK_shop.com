@@ -19,7 +19,23 @@
 @media(max-width:560px){.container{width:min(100% - 22px,1180px)}.hero{padding-top:38px}.hero p{font-size:15px}.grid{grid-template-columns:1fr}.visual{height:230px}.toolbar{align-items:flex-start;gap:10px;flex-direction:column}.detail-art .item-art{font-size:130px}.detail-info h2{font-size:32px}.row{grid-template-columns:1fr}.hero-card{display:none}}
 </style>
 </head>
-<body>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDAja7dSQe1eZ9zs8t-0fEOdCxIfXLwJb4",
+  authDomain: "finik-shop-7c452.firebaseapp.com",
+  projectId: "finik-shop-7c452",
+  storageBucket: "finik-shop-7c452.firebasestorage.app",
+  messagingSenderId: "437650003488",
+  appId: "1:437650003488:web:0a52d44d37347ebc578e45"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);<body>
 <div class="app">
 <header class="header"><div class="container head"><a class="brand" href="#" onclick="showHome();return false"><span class="logo">Ф</span><span>Финик шоп</span></a><nav class="nav"><button data-tab="adopt" class="active" onclick="showHome('adopt')">Adopt Me</button><button data-tab="mm2" onclick="showHome('mm2')">Murder Mystery 2</button><button data-tab="reviews" onclick="showReviews()">Отзывы</button><button data-tab="admin" onclick="showAdmin()">Админка</button><button id="publishTab" data-tab="publish" style="display:none" onclick="showPublish()">Опубликовать товар</button></nav></div></header>
 <main>
